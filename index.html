@@ -20,7 +20,7 @@
   </script>
 
   <style>
-    /* ========= “Tinder vibe” ========= */
+    /* ========= Interface "Swipe pédagogique" ========= */
     .deck {
       position: relative;
       width: min(92vw, 520px);
@@ -147,14 +147,14 @@
         </div>
         <div>
           <h1 class="text-xl sm:text-2xl font-semibold tracking-tight">Thorax Swipe</h1>
-          <p class="text-sm text-slate-300">Anatomie du thorax • S2 Médecine • Decisions rapides (LIKE / NOPE)</p>
+          <p class="text-sm text-slate-300">Anatomie du thorax • S2 Médecine • Décisions rapides (Valider / Rejeter)</p>
           <p class="text-xs text-slate-400 mt-1">Encadrante : <b class="text-slate-200">PR. HAMRAOUI Salima</b></p>
         </div>
       </div>
 
       <div class="flex items-center gap-2 text-xs text-slate-300">
-        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">← NOPE</span>
-        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">→ LIKE</span>
+        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">← Rejeter</span>
+        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">→ Valider</span>
         <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">45s / carte</span>
       </div>
     </header>
@@ -174,7 +174,7 @@
             <div class="mt-4 space-y-2 text-sm text-slate-300">
               <div class="flex gap-2">
                 <span class="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
-                <p><b class="text-slate-100">UI Tinder</b> : une carte centrale, swipe LIKE/NOPE, feedback immédiat.</p>
+                <p><b class="text-slate-100">Interface “Swipe pédagogique”</b> : une carte centrale, glisser pour valider/rejeter, feedback immédiat.</p>
               </div>
               <div class="flex gap-2">
                 <span class="mt-1 inline-block h-2 w-2 rounded-full bg-sky-400"></span>
@@ -196,7 +196,7 @@
             </button>
 
             <p class="mt-3 text-xs text-slate-400">
-              Astuce : <b class="text-slate-200">Swipe la carte</b> (glisser) ou utilise les boutons LIKE/NOPE.
+              Astuce : <b class="text-slate-200">Glisse la carte</b> (swipe) ou utilise les boutons Valider/Rejeter.
             </p>
 
             <div class="mt-5 rounded-2xl bg-black/20 border border-white/10 p-4 text-xs text-slate-300">
@@ -260,7 +260,7 @@
             <div class="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
               <div id="progressBar" class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-sky-400 w-0 transition-[width] duration-200"></div>
             </div>
-            <p class="mt-2 text-xs text-slate-400">20 cartes — swipe pour avancer.</p>
+            <p class="mt-2 text-xs text-slate-400">20 cartes — glisser pour avancer.</p>
           </div>
 
           <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
@@ -286,7 +286,7 @@
           </div>
         </div>
 
-        <!-- Tinder deck -->
+        <!-- Deck -->
         <div class="flex flex-col items-center gap-4">
           <div class="deck">
             <!-- Back cards (visual stack) -->
@@ -296,12 +296,12 @@
             <!-- Stamps -->
             <div id="stampNope"
               class="stamp left-6 bg-rose-500/15 border-2 border-rose-400/60 text-rose-100">
-              NOPE
+              REJETER
             </div>
             <div id="stampLike"
               class="stamp right-6 bg-emerald-500/15 border-2 border-emerald-400/60 text-emerald-100"
               style="transform: rotate(14deg);">
-              LIKE
+              VALIDER
             </div>
 
             <!-- Front card -->
@@ -359,7 +359,7 @@
                 </div>
 
                 <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-300">
-                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">Swipe = Tinder</span>
+                  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">Glisser la carte</span>
                   <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">← / →</span>
                   <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10">PR. HAMRAOUI Salima</span>
                 </div>
@@ -377,16 +377,16 @@
                 </svg>
               </span>
               <div class="text-left">
-                <p class="font-semibold">NOPE</p>
-                <p class="text-xs text-slate-300 -mt-0.5">Rejeter</p>
+                <p class="font-semibold">REJETER</p>
+                <p class="text-xs text-slate-300 -mt-0.5">Réponse fausse</p>
               </div>
             </button>
 
             <button id="btnLike"
               class="tap-pop rounded-2xl bg-gradient-to-r from-emerald-500/90 to-sky-500/90 border border-white/10 py-3 shadow-lg shadow-emerald-500/10 hover:brightness-110 flex items-center justify-center gap-2">
               <div class="text-right">
-                <p class="font-semibold">LIKE</p>
-                <p class="text-xs text-white/80 -mt-0.5">Valider</p>
+                <p class="font-semibold">VALIDER</p>
+                <p class="text-xs text-white/80 -mt-0.5">Réponse correcte</p>
               </div>
               <span class="inline-flex h-10 w-10 rounded-2xl bg-white/15 border border-white/20 items-center justify-center">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-white">
@@ -398,7 +398,7 @@
           </div>
 
           <p class="text-xs text-slate-400 text-center">
-            Raccourcis : <b class="text-slate-200">←</b> NOPE • <b class="text-slate-200">→</b> LIKE • <b class="text-slate-200">I</b> Inspecter 3D
+            Raccourcis : <b class="text-slate-200">←</b> Rejeter • <b class="text-slate-200">→</b> Valider • <b class="text-slate-200">I</b> Inspecter 3D
           </p>
         </div>
       </section>
@@ -678,7 +678,7 @@
 
       function handleTimeout() {
         if (state.locked) return;
-        handleChoice(false, true); // timeout = incorrect => NOPE
+        handleChoice(false, true); // timeout = incorrect => Rejeter
       }
 
       // =========================
@@ -805,20 +805,16 @@
             global: new THREE.Group()
           };
 
-          // Build ribs with curves (more “realistic” than torus)
           function ribCurve(sideSign, level) {
-            // sideSign: -1 left, +1 right
-            // level: 0..11 (1..12 ribs)
             const y = 4.3 - level * 0.55;
             const width = 4.9 + level * 0.35;
             const depth = 3.6 + level * 0.2;
 
-            // rib shape from spine (posterior) to sternum (anterior)
-            const p0 = new THREE.Vector3(0.5 * sideSign, y, -3.1);              // posterior near spine
-            const p1 = new THREE.Vector3(2.2 * sideSign, y + 0.2, -2.0);       // posterolateral
-            const p2 = new THREE.Vector3((width) * sideSign, y + 0.15, 0.2);   // lateral
-            const p3 = new THREE.Vector3((width-0.8) * sideSign, y - 0.1, depth); // anterolateral
-            const p4 = new THREE.Vector3(1.2 * sideSign, y - 0.25, 3.15);      // anterior near sternum
+            const p0 = new THREE.Vector3(0.5 * sideSign, y, -3.1);
+            const p1 = new THREE.Vector3(2.2 * sideSign, y + 0.2, -2.0);
+            const p2 = new THREE.Vector3((width) * sideSign, y + 0.15, 0.2);
+            const p3 = new THREE.Vector3((width-0.8) * sideSign, y - 0.1, depth);
+            const p4 = new THREE.Vector3(1.2 * sideSign, y - 0.25, 3.15);
 
             const curve = new THREE.CatmullRomCurve3([p0, p1, p2, p3, p4], false, "catmullrom", 0.6);
             return curve;
@@ -835,7 +831,6 @@
             groups.ribs.add(left, right);
           }
 
-          // Sternum (manubrium + body + xiphoid)
           const sternumBody = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.7, 5.2, 18), matBone2);
           sternumBody.position.set(0, 0.9, 3.25);
           sternumBody.rotation.x = 0.08;
@@ -849,11 +844,9 @@
 
           groups.sternum.add(sternumBody, manubrium, xiphoid);
 
-          // Spine (schematic vertebral column)
           const spine = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.65, 8.6, 20), matBone2);
           spine.position.set(0, 1.1, -3.25);
 
-          // Diaphragm (dome)
           const diaphragm = new THREE.Mesh(
             new THREE.SphereGeometry(5.2, 36, 18, 0, Math.PI * 2, 0, Math.PI / 2),
             new THREE.MeshStandardMaterial({
@@ -866,7 +859,6 @@
           diaphragm.scale.set(1.15, 0.55, 0.95);
           groups.diaphragm.add(diaphragm);
 
-          // Superior aperture ring (highlight frame)
           const supRing = new THREE.Mesh(
             new THREE.TorusGeometry(4.95, 0.10, 12, 80),
             new THREE.MeshStandardMaterial({
@@ -879,19 +871,16 @@
           supRing.position.set(0, 4.75, 0.2);
           groups.apertureSuperior.add(supRing);
 
-          // Mediastinum volume
           const medi = new THREE.Mesh(new THREE.BoxGeometry(2.7, 5.8, 2.9), matMedi);
           medi.position.set(0, 1.0, 0.25);
           groups.mediastinum.add(medi);
 
-          // Lungs (more “real” silhouette via distorted spheres)
           function makeLung(sideSign) {
             const geo = new THREE.SphereGeometry(2.7, 40, 28);
-            // slight deformation to mimic lung contour (simple + stable)
             const pos = geo.attributes.position;
             for (let i = 0; i < pos.count; i++) {
               const x = pos.getX(i), y = pos.getY(i), z = pos.getZ(i);
-              const taper = 1 - (y + 2.7) / 5.4; // taper toward base
+              const taper = 1 - (y + 2.7) / 5.4;
               const bulge = 1 + 0.08 * Math.sin((y + 2.7) * 2.1) + 0.05 * Math.cos((z) * 2.4);
               pos.setXYZ(i, x * (1.0 + 0.08 * taper) * bulge, y * (1.15 - 0.1 * taper), z * (0.9 + 0.08 * taper));
             }
@@ -906,7 +895,6 @@
           const lungL = makeLung(-1);
           const lungR = makeLung(+1);
 
-          // Bronchi/vascular “glow lines” inside lungs (procedural)
           function makeGlowNetwork(centerX) {
             const group = new THREE.Group();
             const paths = 14;
@@ -936,7 +924,6 @@
           const netL = makeGlowNetwork(-2.7);
           const netR = makeGlowNetwork(+2.7);
 
-          // Particles (sparks)
           const particlesCount = 250;
           const pGeo = new THREE.BufferGeometry();
           const pPos = new Float32Array(particlesCount * 3);
@@ -949,15 +936,12 @@
           const pMat = new THREE.PointsMaterial({ color: 0xFF5AAE, size: 0.06, transparent: true, opacity: 0.55 });
           const sparks = new THREE.Points(pGeo, pMat);
 
-          // Assemble global
           groups.global.add(groups.ribs, groups.sternum, spine, groups.diaphragm, lungL, lungR, netL, netR, groups.apertureSuperior, groups.mediastinum, sparks);
           root.add(groups.global);
 
-          // Default orientation
           root.rotation.x = -0.08;
           root.rotation.y = 0.55;
 
-          // Controls
           let controls = null;
           if (interactive && window.THREE.OrbitControls) {
             controls = new THREE.OrbitControls(camera, canvasEl);
@@ -969,7 +953,6 @@
             controls.maxDistance = 26;
           }
 
-          // Resize helpers
           function resize() {
             const w = canvasEl.clientWidth || 1;
             const h = canvasEl.clientHeight || 1;
@@ -985,7 +968,6 @@
           const ro = new ResizeObserver(() => resize());
           ro.observe(canvasEl);
 
-          // Focus highlighting
           let focusKey = "global";
           function setFocus(k) { focusKey = k || "global"; }
 
@@ -995,17 +977,14 @@
           }
 
           function applyFocus(t) {
-            // reset emissive baseline (cheap & stable)
             matBone.emissive.setHex(0x0b1b2e);  matBone.emissiveIntensity = 0.35;
             matBone2.emissive.setHex(0x0b1b2e); matBone2.emissiveIntensity = 0.25;
             matLung.emissive.setHex(0x3a001c);  matLung.emissiveIntensity = 0.55;
             matMedi.emissive.setHex(0x1a083a);  matMedi.emissiveIntensity = 0.7;
 
-            // toggles
             groups.apertureSuperior.visible = (focusKey === "apertureSuperior" || focusKey === "global");
             groups.mediastinum.visible = (focusKey === "mediastinum" || focusKey === "global");
 
-            // emphasize by focus
             if (focusKey === "ribs" || focusKey === "wall" || focusKey === "dimensions") {
               pulseMat(matBone, t, 0.55, 0.65, 0x38BDF8);
             } else if (focusKey === "sternum" || focusKey === "surface") {
@@ -1017,18 +996,15 @@
             } else if (focusKey === "mediastinum") {
               pulseMat(matMedi, t, 0.85, 0.75, 0xA78BFA);
             } else if (focusKey === "apertureSuperior") {
-              // ring already emissive; keep on + pulse slightly
               const m = supRing.material;
               m.emissiveIntensity = 0.9 + 0.7 * (0.5 + 0.5 * Math.sin(t * 4.0));
             } else {
-              // global: gentle breathing motion
               const breathe = 1 + 0.01 * Math.sin(t * 2.0);
               lungL.scale.set(1.05*breathe, 1.15*breathe, 0.95*breathe);
               lungR.scale.set(1.05*breathe, 1.15*breathe, 0.95*breathe);
             }
           }
 
-          // Render loop
           let raf = 0;
           function loop() {
             raf = requestAnimationFrame(loop);
@@ -1036,10 +1012,8 @@
 
             const t = performance.now() / 1000;
 
-            // Auto-rotate only if not interactive (card view)
             if (!interactive) root.rotation.y += 0.002;
 
-            // Drift sparks slightly
             const pos = pGeo.attributes.position;
             for (let i = 0; i < pos.count; i++) {
               const ix = i*3;
@@ -1078,10 +1052,9 @@
         }
       }
 
-      // Instances:
       const thoraxPreview = createNeonThorax3D(canvasPreview, noWebGLPreview, { interactive: true });
       const thoraxCard    = createNeonThorax3D(canvasCard, noWebGLCard, { interactive: false });
-      let thoraxInspect   = null; // lazy
+      let thoraxInspect   = null;
 
       btnPreviewReset.addEventListener("click", () => thoraxPreview?.resetView());
 
@@ -1179,7 +1152,6 @@
       }
 
       function animateSwipe(direction) {
-        // direction: "like" or "nope"
         if (direction === "like") setStamp("like", true);
         else setStamp("nope", true);
 
@@ -1202,7 +1174,7 @@
       }
 
       // =========================
-      // 9) Tinder swipe (drag)
+      // 9) Swipe (drag)
       // =========================
       const drag = { active:false, startX:0, startY:0, dx:0, dy:0 };
       const SWIPE_THRESHOLD = 120;
@@ -1228,7 +1200,6 @@
         card.style.setProperty("--rot", `${rot}deg`);
         card.style.transform = `translateX(${drag.dx}px) rotate(${rot}deg) scale(${1 - lift})`;
 
-        // Stamp intensity
         const likeAlpha = clamp((drag.dx - 30) / 140, 0, 1);
         const nopeAlpha = clamp((-drag.dx - 30) / 140, 0, 1);
 
@@ -1238,7 +1209,6 @@
         stampLike.classList.toggle("show", likeAlpha > 0.02);
         stampNope.classList.toggle("show", nopeAlpha > 0.02);
 
-        // Stronger shadow while dragging
         card.style.boxShadow = `0 28px 90px rgba(0,0,0,.55), 0 8px 24px rgba(0,0,0,.35)`;
       }
 
@@ -1254,9 +1224,8 @@
         if (!drag.active || state.locked) return;
         drag.active = false;
 
-        // Decide swipe
-        if (drag.dx > SWIPE_THRESHOLD) { handleChoice(true, false); return; }  // LIKE
-        if (drag.dx < -SWIPE_THRESHOLD) { handleChoice(false, false); return; } // NOPE
+        if (drag.dx > SWIPE_THRESHOLD) { handleChoice(true, false); return; }   // Valider
+        if (drag.dx < -SWIPE_THRESHOLD) { handleChoice(false, false); return; } // Rejeter
 
         resetDrag();
       }
@@ -1297,7 +1266,6 @@
 
         inspectModal.classList.remove("modalHidden");
 
-        // Lazy init
         if (!thoraxInspect) {
           thoraxInspect = createNeonThorax3D(canvasInspect, noWebGLInspect, { interactive: true });
         }
@@ -1313,14 +1281,11 @@
       btnInspectClose.addEventListener("click", closeInspect);
       btnInspectReset.addEventListener("click", () => thoraxInspect?.resetView());
 
-      // Close modal by clicking backdrop
       inspectModal.addEventListener("click", (e) => {
         if (e.target === inspectModal) closeInspect();
       });
 
-      // =========================
       // Init
-      // =========================
       qTotalEl.textContent = String(QUESTIONS.length);
       updateFocus("global");
 
